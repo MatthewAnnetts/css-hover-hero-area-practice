@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+}
+
+.loader {
+  position: relative;
+}
+
+/*Loader 1 animations*/
+
+@keyframes loader1 {
+
+  50% {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@keyframes loader1circle {
+  50% {
+    border-radius: 50%;
+  }
+}
+
+
+.loader1 {
+  width: 200px;
+  height: 200px;
+  animation: loader1 2s ease infinite;
+}
+
+.loader1 span {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.loader1 span:nth-child(1) {
+  top: 0;
+  left: 0;
+  background-color: red;
+  animation: loader1circle 2s ease infinite;
+  box-shadow: 0 0 20px red;
+}
+
+.loader1 span:nth-child(2) {
+  top: 0;
+  right: 0;
+  background-color: green;
+  animation: loader1circle 2s ease infinite;
+  box-shadow: 0 0 20px green;
+}
+
+.loader1 span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  background-color: blue;
+  animation: loader1circle 2s ease infinite;
+  box-shadow: 0 0 20px blue;
+}
+
+.loader1 span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  background-color: yellow;
+  animation: loader1circle 2s ease infinite;
+  box-shadow: 0 0 20px yellow;
+}
+
+/*Loader 2 animation*/
+
+.loader2 {
+  width: 200px;
+  height: 100px;
+}
+
+.loader2 span {
+  position: absolute;
+  width: 20px;
+  height: 100px;
+  top: 0;
+  border-radius: 20px;
+}
+
+@keyframes loader2{
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(2);
+  }
+}
+
+.loader2 span:nth-child(1) {
+  left: 0;
+  background-color: violet;
+  animation: loader2 2s infinite;
+  box-shadow: 0 0 20px violet;
+}
+
+.loader2 span:nth-child(2) {
+  left: 25px;
+  background-color: indigo;
+  animation: loader2 2s infinite 0.15s;
+  box-shadow: 0 0 20px indigo;
+}
+
+.loader2 span:nth-child(3) {
+  left: 50px;
+  background-color: blue;
+  animation: loader2 2s infinite 0.3s;
+  box-shadow: 0 0 20px blue;
+}
+
+.loader2 span:nth-child(4) {
+  left: 75px;
+  background-color: green;
+  animation: loader2 2s infinite 0.45s;
+  box-shadow: 0 0 20px green;
+}
+
+.loader2 span:nth-child(5) {
+  left: 100px;
+  background-color: yellow;
+  animation: loader2 2s infinite 0.6s;
+  box-shadow: 0 0 20px yellow;
+}
+
+.loader2 span:nth-child(6) {
+  left: 125px;
+  background-color: orange;
+  animation: loader2 2s infinite 0.75s;
+  box-shadow: 0 0 20px orange;
+}
+
+.loader2 span:nth-child(7) {
+  left: 150px;
+  background-color: red;
+  animation: loader2 2s infinite 0.9s;
+  box-shadow: 0 0 20px red;
+}
+
+.loader2 span:nth-child(8) {
+  left: 175;
+  background-color: #fff;
+  animation: loader2 2s infinite 1.05s;
+  box-shadow: 0 0 20px #fff;
+}
