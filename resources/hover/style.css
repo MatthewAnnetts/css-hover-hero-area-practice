@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.element,.element1,.element2,.element3,.element4,.element5,.element6,.element7,.element8,.element9 {
+  float: left;
+  width: 400px;
+  height: 350px;
+  position: relative;
+  margin: 50px;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  background: linear-gradient(to bottom right, red, yellow);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 5px solid #222;
+  z-index: -2;
+  box-sizing: border-box;
+}
+
+.p-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.description {
+  margin: 20px 0;
+}
+
+.back-content {
+  padding: 0 60px;
+}
+
+.icons .fa {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0 7px;
+}
+
+.element .back-content {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+/*Element hover effects*/
+.element:hover .front {
+  width: 100px;
+  height: 100px;
+  top:calc(50% - 50px);
+  left: calc(100% - 50px);
+}
+
+.element:hover .front img {
+  border-radius: 50px;
+  box-shadow: 0 0 20px blue, 0 0 40px blue;
+}
+
+.element:hover .back-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/*element1 hover effect*/
+.element1 .back-content
+{
+  opacity: 0;
+  transform:translateY(-100px);
+  transition:all 1s ease;
+}
+
+.element1:hover .back-content
+{
+  opacity: 1;
+  transform:translateY(0px);
+}
+
+.element1:hover .front
+{
+  opacity: 0;
+  top: -100%;
+}
+
+.element1 .back:before
+{
+  position: absolute;
+  content: '';
+  top: 200px;
+  bottom: 200px;
+  right: 50px;
+  left: 50px;
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  transition:all 1s ease;
+
+}
+
+.element1 .back:after
+{
+  position: absolute;
+  content: '';
+  top: 50px;
+  bottom: 50px;
+  right: 200px;
+  left: 200px;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transition:all 1s ease;
+
+}
+
+.element1:hover .back:before
+{
+  top: 30px;
+  bottom: 30px;
+}
+
+.element1:hover .back:after
+{
+  right: 30px;
+  left: 30px;
+}
+
+/*element 2 styles*/
+
+.element2:hover .front
+{
+  opacity: 0;
+}
+
+.element2 .back-content
+{
+  transform:scale(0);
+  transition:all 0.5s ease;
+}
+
+.element2:hover .back-content
+{
+  transform:scale(1);
+}
+
+.element2 .see
+{
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left:0;
+  top: 0;
+  background-color: #222;
+  z-index: -3;
+  transition:all 0.5s ease;
+  transform:scale(0,1);
+}
+
+.element2 .back
+{
+  color: #fff;
+}
+
+.element2 .see:nth-child(2)
+{
+  left:calc(25%);
+}
+.element2 .see:nth-child(3)
+{
+  left:calc(50%);
+}
+.element2 .see:nth-child(4)
+{
+  left:calc(75%);
+}
+
+.element2:hover .see
+{
+  transform:scale(1,1);
+}
+
+/*element 3 styling*/
+
+.element3:hover .front {
+  opacity: 0;
+  transform:translateX(-400px)rotate(720deg);
+}
+
+.element3 .back-content {
+  transform:translateX(-50px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.element3:hover .back-content {
+  transform:translateX(0px);
+  opacity: 1;
+}
+
+.element3 .back:before {
+  position: absolute;
+  content: '';
+  border-right: 2px solid #fff;
+  border-left: 2px solid #fff;
+  top: 200px;
+  bottom: 200px;
+  left: 30px;
+  right: 30px;
+  transition: all 1s ease;
+}
+
+.element3 .back:after {
+  position: absolute;
+  content: '';
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  top: 30px;
+  bottom: 30px;
+  left: 200px;
+  right: 200px;
+  transition: all 1s ease;
+}
+
+.element3:hover .back:before {
+  top: 70px;
+  bottom: 70px;
+}
+
+.element3:hover .back:after {
+  right: 70px;
+  left: 70px;
+}
+
+/*element 4 styles*/
+
+.element4 {
+  overflow: hidden;
+}
+
+.element4 .front {
+  transform:skewX(0deg);
+  opacity: 1;
+  transition:transform 0.3s ease, left 0.5s ease 0.3s, opacity 0.5s ease 0.5s;
+}
+
+.element4:hover .front {
+  opacity: 0;
+  transform:skewX(-20deg);
+  left: -100%;
+}

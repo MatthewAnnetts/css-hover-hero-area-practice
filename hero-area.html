@@ -1,0 +1,101 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Classy Hero Area</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      position: relative;
+    }
+
+    @keyframes bg {
+      0%, 100% {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      25% {
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+
+      50% {
+        background-color: rgba(0, 255, 0, 0.5);
+      }
+
+      75% {
+        background-color: rgba(0, 0, 255, 0.5);
+      }
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: bg 4s linear infinite;
+      overflow: hidden;
+    }
+
+    .slider-container h1 {
+      font-size: 60px;
+      text-shadow: 0 0 10px #fff;
+    }
+
+    .slider video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    .cta {
+      padding: 15px 120px;
+      /*border: solid 1px #fff;*/
+      display: inline-block;
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      box-shadow: 0 0 3px #fff;
+      color: #fff;
+      text-shadow: 0 0 3px black;
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+      border-radius: 30px;
+    }
+
+    .cta:hover {
+      background-color: #fff;
+      color: #fff;
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+    }
+
+    .desc {
+      margin: 35px ;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <video muted autoplay loop src="videos/anim.mp4" type="video/mp4"></video>
+    <div class="slider-container">
+      <h1>We are Web Develpers</h1>
+      <p class="desc">We just love to develop websites and while doing that we need some coffee</p>
+      <div class="cta">
+        Contact Us
+      </div>
+    </div>
+  </div>
+</body>
+</html>
